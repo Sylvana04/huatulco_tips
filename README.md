@@ -1,0 +1,1 @@
+# huatulco_tips
