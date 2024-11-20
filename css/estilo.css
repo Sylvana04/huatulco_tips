@@ -1,0 +1,488 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+img {
+    max-width: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+h1 {
+    font-family: nunito, sans-serif;
+    color: #000000;
+    text-align: center;
+    margin: 0.5em;
+}
+
+p {
+    font-family: nunito, sans-serif;
+    margin: 1em;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    background-color: rgb(63, 224, 208);
+}
+
+#logo a img {
+    width: 150px;
+    height: 80px;
+    margin: 0.5em;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 1em;
+}
+
+nav un li:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    text-decoration: none;
+    transition:  all 0.3s ease;
+}
+
+nav li:hover {
+    transform: scale(1.1);
+}
+/* Estilos generales para el header y el logo */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#logo img {
+    height: 50px;
+}
+
+/* Estilos del menú */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* Estilos del menú en pantallas grandes */
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Ocultar el menú y mostrar el ícono de hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Oculta el menú por defecto */
+        position: absolute;
+        top: 80px;
+        right: 10px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        width: 200px;
+    }
+
+    nav ul.active {
+        display: flex; /* Muestra el menú cuando se activa */
+    }
+
+    /* Ícono de hamburguesa */
+    .menu {
+        padding-right: 1em;
+    }
+    .menu-icon {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-end;
+    }
+
+    .menu-icon span {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        transition: 0.3s;
+    }
+}
+
+
+
+
+
+
+/* estilos del home */
+.fondoceleste {
+    background-color: rgb(162, 238, 229);
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 15px;
+}
+
+.imagenpresentacion {
+    object-fit: cover;
+    width: 75%;
+    height: 450px;
+    display: block;
+    margin: 1em auto;
+    border-radius: 15px;
+}
+
+@media (min-width: 768px) {
+    .presentacion {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .presentacion p {
+        width: 70%;
+        margin: auto;
+        font-size: 25px;
+    }
+
+    .imagenpresentacion {
+        margin-left: 6em;
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(63, 224, 208);
+}
+
+.contenedorfooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    margin: 1em 3em;
+    border-radius: 15px;
+}
+
+.imagenfooter1 {
+    width: 25px;
+}
+
+.imagenfooter2 {
+    width: 50px;
+}
+
+.imagenfooter3 {
+    width: 40px;
+}
+
+.pfooter {
+    display: block;
+    width: 50%;
+    padding: 0.5em;
+    margin: 0 auto;
+    background-color: rgb(197, 197, 197);
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 1em;
+}
+
+.imagenquienessomos {
+    width: 300px;
+    height: 200px;
+    display: block;
+    margin: 1.5em auto;
+}
+
+.textoceleste {
+    color: rgb(15, 167, 154);
+}
+
+#textoquienessomos {
+    margin: 2em;
+}
+
+@media (min-width: 410px) {
+    .imagenesquienessomos {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+    }
+}
+
+.contenedorimagenesgaleria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.imagengaleria {
+    width: 300px;
+    height: 200px;
+    display: block;
+    margin: 1.5em auto;
+}
+
+@media (min-width: 768px) {
+    .imagenesgaleria {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+    }
+}
+
+.textogaleria {
+    text-align: center;
+}
+
+.textogaleria p {
+    margin: 0 0.5em;
+}
+
+.serviciosturisticos {
+    display: flex;
+    flex-direction: column;
+}
+
+.serviciosturisticos p {
+    width: 80%;
+    margin: 1em auto;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.serviciosturisticos img {
+    width: 150px;
+    height: auto;
+}
+
+.serviciosturisticos-contenedor {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 4em;
+    justify-content: center;
+}
+
+@media (max-width: 828px) {
+    .serviciosturisticos-contenedor {
+        flex-direction: column;
+    }
+    .serviciosturisticos img {
+        margin: 1em auto;
+    }
+}
+@media (min-width: 828px) {
+    .serviciosturisticosgrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "imagengrid1 imagengrid2"
+            "imagengrid3 imagengrid4";
+        gap: 1em;
+    }
+
+    .imagengrid1 {
+        grid-area: imagengrid1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagengrid2 {
+        grid-area: imagengrid2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagengrid3 {
+        grid-area: imagengrid3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagengrid4 {
+        grid-area: imagengrid4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+    .imagenservicioturistico {
+        width: 300px;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+
+    .textocontacto {
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 0 2em;
+    }
+
+    .imagencontacto {
+        width: 350px;
+        height: auto;
+        display: block;
+        margin: 3em auto;
+    }
+
+    @media (min-width: 820px) {
+        .textocontacto {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+        }
+        .imagencontacto {
+            width: 450px;
+        }
+    }
+
+    @media (max-width: 819px) {
+        .textocontacto {
+            flex-direction: column;
+        }
+        .imagencontacto {
+            width: 300px;
+        }
+    }
+
+    .imagenpersonas {
+        width: 80%;
+        height: auto;
+        margin: 1em auto;
+    }
+    .seccion2contacto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    .seccion2interno {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5em;
+    }
+
+    .botoncontacto {
+        display: block;
+        margin: 1em auto;
+        padding: 0.5em 1em;
+        background-color: rgb(15, 167, 154);
+        color: white;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    .contactohoteles {
+        width: 400px;
+        height: 300px;
+        display: block;
+        margin: 3em auto;
+    }
+
+    .aerolineas-contenedor {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: 3em;
+        width: 80%;
+        margin: auto;
+    }
+
+    .aerolineas-interno {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .aerolineas {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    .aerolineas div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    .aerolineas div img {
+        width: 30px;
+        height: auto;
+    }
+
+    @media (max-width: 828px) {
+        .aerolineas-contenedor {
+            flex-direction: column;
+        }
+    }
+
+.boton-celeste {
+    display: block;
+    margin: 1em auto;
+    padding: 0.5em 1em;
+    background-color: rgb(15, 167, 154);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
